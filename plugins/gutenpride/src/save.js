@@ -22,10 +22,10 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save( {attributes} ) {
 	return (
-		<p { ...useBlockProps.save() }>
-			{ __( 'Gutenpride – hello from the saved content!', 'gutenpride' ) }
-		</p>
+		<div { ...useBlockProps.save() }>
+			{ attributes.message }
+		</div>
 	);
 }

@@ -26,6 +26,15 @@ import save from './save';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType( 'create-block/gutenpride', {
+	apiVersion: 2,
+	attributes: {
+		message: {
+			type: 'string',
+			source: 'text',
+			selector: 'div',
+			default: ''
+		}
+	},
 	/**
 	 * @see ./edit.js
 	 */
