@@ -13,6 +13,8 @@ add_action('enqueue_block_editor_assets', function() {
         'myeditor-script',
         // 第一引数：JSファイルを定義（絶対指定）
         // 第二引数：__FILE__ -> 現在のファイルと同じ場所を定義
-        plugins_url('myeditor.js', __FILE__)
+        plugins_url('myeditor.js', __FILE__),
+        // 第三引数：スクリプトが依存するスクリプトのハンドルの配列
+        ['wp-blocks']
     );
 });
